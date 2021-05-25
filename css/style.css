@@ -140,12 +140,23 @@ html{
   .content{
     grid-template-columns: 1fr 1fr;
     gap: 2.5rem 1rem;
+  }
+  .card{
+    width: 90%;
+    /* object-fit: cover; */
+    justify-self: center;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  /* Contenido */
+  .content{
+    grid-template-columns: 1fr;
+    gap: 2rem;
     justify-content: center;
   }
   .card{
-    background-color: gray;
     width: 90%;
-    height: 450px;
     /* object-fit: cover; */
     justify-self: center;
   }
