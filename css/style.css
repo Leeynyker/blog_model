@@ -258,7 +258,6 @@ html {
 .posted__title{
   font-size: 5rem;
   font-family: var(--title-font);
-  /* text-align: center; */
   color: var(--title-color);
 }
 .posted__subtitle{
@@ -303,20 +302,32 @@ html {
     cursor: pointer;
   }
 
-  /* Contenido */
   .content {
     grid-template-columns: 1fr 1fr;
     gap: 2.5rem 1rem;
   }
   .post {
     width: 90%;
-    /* object-fit: cover; */
     justify-self: center;
+  }
+
+  .posted__title{
+    font-size: 4rem;
+  }
+  .posted__subtitle{
+    font-size: 1.4rem;
+  }
+  .posted__text{
+    font-size: 1.8rem;
   }
 }
 
 @media screen and (max-width: 600px) {
-  /* Contenido */
+  .title__name {
+    font-size: 7rem;
+    margin: 0 0 2rem 0;
+  }
+
   .content {
     grid-template-columns: 1fr;
     gap: 2rem;
@@ -327,4 +338,23 @@ html {
     /* object-fit: cover; */
     justify-self: center;
   }
+
+  .posted__figure{
+    width: 80%;
+    margin: 2rem auto;
+  }
+  .posted__img{
+    max-height: 250px;
+  }
+  .posted__title{
+    font-size: 3rem;
+  }
+  .posted__subtitle{
+    font-size: 1.4rem;
+  }
+  .posted__text{
+    font-size: 1.6rem;
+    margin-bottom: 1.8rem;
+  }
+
 }
