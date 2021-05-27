@@ -11,8 +11,8 @@
   --background: #e0e0e0;
   --background-cards: #f7f7f7;
   --general-font: "Mulish", sans-serif;
-  --cursive-font: 'Dancing Script', cursive;
-  --title-font:
+  --cursive-font: "Dancing Script", cursive;
+  --title-font: ;
 }
 * {
   box-sizing: border-box;
@@ -23,9 +23,9 @@ html {
   font-size: 62.5%;
   background-color: var(--background);
 }
-*::selection{
+*::selection {
   color: var(--background-cards);
-  background-color:var(--second-light);
+  background-color: var(--second-light);
 }
 /* Header */
 .header {
@@ -120,8 +120,8 @@ html {
   object-fit: cover;
   border-radius: 10px;
   position: static;
-  border-bottom:var(--second-light) solid 4px;
-  box-shadow: 5px 4px 5px 0px rgba(0,0,0,0.6);
+  border-bottom: var(--second-light) solid 4px;
+  box-shadow: 5px 4px 5px 0px rgba(0, 0, 0, 0.6);
   filter: grayscale(60%);
   -webkit-filter: grayscale(60%);
   -moz-filter: grayscale(60%);
@@ -145,7 +145,7 @@ html {
   color: inherit;
   font-size: 1.3rem;
 }
-.post__link:hover{
+.post__link:hover {
   color: var(--primary-light);
 }
 .post__title {
@@ -208,7 +208,7 @@ html {
   color: var(--second-light);
 }
 
-.footer{
+.footer {
   width: 100%;
   /* height: 80px; */
   background-color: var(--second-dark);
@@ -219,67 +219,133 @@ html {
   align-items: center;
   font-size: 1.8rem;
 }
-.footer__text{
+.footer__text {
   text-align: center;
   margin: 2rem 0 0.5rem;
 }
-.footer__icons{
+.footer__icons {
   text-align: center;
   margin: 0.5rem;
 }
-.icon{
+.icon {
   font-size: 2.5rem;
   color: #000;
   margin: 0 0.5rem;
 }
-.icon:hover{
+.icon:hover {
   color: var(--primary-light);
 }
-.footer__credits{
+.footer__credits {
   margin: 1.5rem;
   font-size: 1.5rem;
 }
-.posted__figure{
+.posted__figure {
   width: 80%;
   margin: 5rem auto 2rem auto;
 }
-.posted__img{
+.posted__img {
   align-self: center;
   width: 100%;
   height: 400px;
   object-fit: cover;
   border-radius: 10px;
 }
-.posted__head{
+.posted__head {
   width: 80%;
   margin: auto;
   margin-bottom: 2rem;
 }
-.posted__title{
+.posted__title {
   font-size: 5rem;
   font-family: var(--title-font);
   color: var(--title-color);
 }
-.posted__subtitle{
+.posted__subtitle {
   font-size: 1.6rem;
   margin: 0 0.5rem;
   font-family: var(--general-font);
   color: var(--sibtitle-color);
 }
-.posted__content{
+.posted__content {
   width: 80%;
   margin: auto;
 }
-.posted__text{
+.posted__text {
   font-size: 2rem;
+  line-height: 1.5;
   font-family: var(--general-font);
   text-align: justify;
   margin-bottom: 2rem;
   color: var(--general-color);
 }
-.posted__link{
+.posted__link {
   font-size: 1.6rem;
 }
+
+/* podast */
+/* .podcast{} */
+.podcast{
+  width: 100%;
+  margin: auto;
+  object-fit: cover;
+  background: url(../img/wave1.svg);
+  background-repeat: repeat-x;
+  background-color: var(--background-cards);
+  object-fit: cover;
+  top: 0;
+}
+.podcast__content {
+  width: 80%;
+  margin: auto;
+}
+
+.podcast:hover{
+  animation: animatewave 5s linear infinite;
+  opacity: 1;
+  animation-delay: 0s;
+}
+@keyframes animatewave {
+  0% {
+    background-position-x: 0;
+  }
+  100% {
+    background-position-x: -2200px;
+  }
+}
+.podcast__header{
+  /* color:var(--title-color); */
+  width: 80%;
+  margin: auto;
+  padding: 4rem 0 2rem 0;
+}
+.podcast__title{
+  font-family: var(--title-font);
+  font-size: 2.2rem;
+  color: var(--title-color);
+  letter-spacing: 0.1rem;
+}
+.podcast__subtitle{
+  font-family: var(--general-font);
+  font-size: 1.3rem;
+  color: var(--sibtitle-color);
+  /* letter-spacing: 0.1rem; */
+}
+.podcast__audio {
+  /* width: 80%; */
+  object-fit: cover;
+  /* margin: auto; */
+  width: 100%;
+}
+.podcast__descrip{
+  /* width: 80%; */
+  margin: 2rem auto;
+}
+.podcast__text{
+  font-size: 1.4rem;
+  font-family: var(--general-font);
+  line-height: 1.5;
+}
+
 /* Responsive */
 @media screen and (max-width: 800px) {
   /* header */
@@ -311,13 +377,13 @@ html {
     justify-self: center;
   }
 
-  .posted__title{
+  .posted__title {
     font-size: 4rem;
   }
-  .posted__subtitle{
+  .posted__subtitle {
     font-size: 1.4rem;
   }
-  .posted__text{
+  .posted__text {
     font-size: 1.8rem;
   }
 }
@@ -339,22 +405,21 @@ html {
     justify-self: center;
   }
 
-  .posted__figure{
+  .posted__figure {
     width: 80%;
     margin: 2rem auto;
   }
-  .posted__img{
+  .posted__img {
     max-height: 250px;
   }
-  .posted__title{
-    font-size: 3rem;
+  .posted__title {
+    font-size: 3.5rem;
   }
-  .posted__subtitle{
-    font-size: 1.4rem;
+  .posted__subtitle {
+    font-size: 1.2rem;
   }
-  .posted__text{
+  .posted__text {
     font-size: 1.6rem;
     margin-bottom: 1.8rem;
   }
-
 }
